@@ -1,7 +1,0 @@
-[submodule "atividades/atividade05"]
-	path = atividades/atividade05
-	url = https://github.com/jpaullopes/atividade05-POO.git
-
-[submodule "atividades/atividade05.extra"]
-    path = atividades/atividade05.extra
-    url = https://github.com/jpaullopes/atividade05-extra.git
