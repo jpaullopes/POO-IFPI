@@ -1,17 +1,14 @@
 import { question } from "readline-sync";
-import { App } from "./models/app";
-import { exibirMenu, exibirMensagemFinalizacao } from "./utils/utilsExibicao";
-import { Banco } from "./models/banco"; //importando o banco para fazer a quetão
+import { App } from "../bank/models/app";
+import { exibirMenu, exibirMensagemFinalizacao } from "../bank/utils/utilsExibicao";
 
-let app: App = new App(); //cria a aplicação
+let app: App = new App();
 let opcao: string = '';
 
 do {
-    //exibe o menu bonitinho
     console.log(exibirMenu());
-    opcao = question("Opção:");//usuario escolhe a opção
+    opcao = question("Opção:");
 
-    //switch case para cada opção que o usurio escolher
     switch (opcao) {
         case "1":
             app.inserirConta();
@@ -55,13 +52,20 @@ do {
         case "14":
             app.renderJurosBanco();
             break;
+        case "15":
+            app.carregarContas();
+            break;
+        case "16":
+            app.salvarContas();
+            break;
         case "0":
             break;
     }
-    if(opcao != "0"){
-    console.log(exibirMensagemFinalizacao());
-    }//só pra ficar bonitinho e não ficar a aparecendo a mensagem de finalização quando o usuário sair do programa
-    question("");//esperar o usuário digitar alguma coisa...
+    if (opcao != "0") {
+        app.salvarContas();
+        console.log(exibirMensagemFinalizacao());
+    }
+    question("");
 } while (opcao != "0");
 
 console.log("Aplicação encerrada");

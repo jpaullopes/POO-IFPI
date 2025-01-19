@@ -38,6 +38,8 @@ function exibirMenu(): string {
 [7] - Totalizações
 [11] - Ordem Bancária
 [13] - Mudar titularidade
+[15] - Carregar contas
+[16] - Salvar contas
 [14] - Render juros
 ---------------------------------
 [ CLIENTES ]
@@ -64,7 +66,8 @@ function exibirMenuConta(): string {
 ---------------------------------
 [1] - Conta Corrente
 [2] - Conta Poupança
-[3] - Conta Imposto`)
+[3] - Conta Imposto
+[4] - Conta Salário`)
 }
 
 export { exibirContaFormatada, exibirClienteFormatado, exibirMenu, exibirMensagemFinalizacao, exibirMenuConta };
