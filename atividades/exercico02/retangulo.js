@@ -1,21 +1,21 @@
-var retangulo = /** @class */ (function () {
-    function retangulo(altura, largura) {
+"use strict";
+class Retangulo {
+    constructor(altura, largura) {
         this.altura = altura;
         this.largura = largura;
     }
-    retangulo.prototype.calcularArea = function () {
+    calcularArea() {
         return this.largura * this.altura;
-    };
-    retangulo.prototype.calcularPerimetro = function () {
+    }
+    calcularPerimetro() {
         return 2 * (this.largura + this.altura);
-    };
-    retangulo.prototype.ehQuadrado = function () {
+    }
+    ehQuadrado() {
         return this.largura === this.altura;
-    };
-    return retangulo;
-}());
+    }
+}
 function main() {
-    var retangulo1 = new retangulo(5, 5);
+    let retangulo1 = new retangulo(5, 5);
     console.log("Área: " + retangulo1.calcularArea());
     console.log("Perímetro: " + retangulo1.calcularPerimetro());
     console.log("É quadrado? " + retangulo1.ehQuadrado());

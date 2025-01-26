@@ -1,30 +1,30 @@
-var ControleDeAudio = /** @class */ (function () {
-    function ControleDeAudio() {
+"use strict";
+class ControleDeAudio {
+    constructor() {
         this.volume = 2;
     }
-    ControleDeAudio.prototype.aumentarVolume = function () {
+    aumentarVolume() {
         if (this.volume < 10) {
             this.volume++;
         }
         else {
             console.log("Volume máximo atingido");
         }
-    };
-    ControleDeAudio.prototype.diminuirVolume = function () {
+    }
+    diminuirVolume() {
         if (this.volume > 0) {
             this.volume--;
         }
         else {
             console.log("Volume mínimo atingido");
         }
-    };
-    ControleDeAudio.prototype.lerVolume = function () {
-        console.log("Volume atual: ".concat(this.volume));
-    };
-    return ControleDeAudio;
-}());
+    }
+    lerVolume() {
+        console.log(`Volume atual: ${this.volume}`);
+    }
+}
 function main() {
-    var controle = new ControleDeAudio();
+    let controle = new ControleDeAudio();
     controle.lerVolume();
     controle.aumentarVolume();
     controle.lerVolume();
